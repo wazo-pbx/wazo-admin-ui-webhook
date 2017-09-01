@@ -10,7 +10,7 @@ setup(
     name='wazo_admin_ui_webhook',
     version='0.1',
 
-    description='Wazo Admin UI Wehook',
+    description='Wazo Admin UI Webhook',
 
     author='Wazo Authors',
     author_email='dev@wazo.community',
