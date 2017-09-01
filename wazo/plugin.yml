@@ -1,0 +1,9 @@
+name: admin-ui-webhook
+namespace: official
+version: 0.0.1
+author: Wazo Team
+display_name: Webhook
+tags:
+  - beta
+  - application
+homepage: https://github.com/sboily/wazo-admin-ui-webhook
