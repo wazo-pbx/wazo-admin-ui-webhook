@@ -23,6 +23,22 @@ class WebhookView(BaseView):
 
     def _populate_form(self, form):
         form.services.choices = self._build_choices_services()
+        form.user.choices = self._build_setted_choices_users(form.users)
+        return form
+
+    def _map_resources_to_form(self, resource):
+        resource['user'] = resource.get('events_user_uuid')
+        resource['events'] = resource.get('events')[0]
+        resource['users'] = resource.get('events_user_uuid')
+        resource['services'] = resource.get('service')
+
+        resource['url'] = resource['config'].get('url')
+        resource['body'] = resource['config'].get('body')
+        resource['verify_certificate'] = resource['config'].get('verify_certificate')
+        resource['method'] = resource['config'].get('method')
+        resource['content_type'] = resource['config'].get('content_type')
+
+        form = self.form(data=resource)
         return form
 
     def _build_choices_services(self):
@@ -31,3 +47,13 @@ class WebhookView(BaseView):
         for service in services['services']:
             services_list.append((service, service))
         return services_list
+
+    def _build_setted_choices_users(self, users):
+        results = []
+        for user in users:
+            if user.lastname.data:
+                text = '{} {}'.format(user.firstname.data, user.lastname.data)
+            else:
+                text = user.firstname.data
+            results.append((user.uuid.data, text))
+        return results

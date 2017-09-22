@@ -7,15 +7,17 @@
 {% block content %}
   {% call build_section_row() %}
     {% call build_form_box('Webhook', resource.name, 'globe') %}
-      {% call build_form(action=url_for('.WebhookView:put', id=resource.id)) %}
+      {% call build_form(action=url_for('.WebhookView:put', id=resource.uuid)) %}
         {% call add_default_fields(form=form, submit_value="Update") %}
           {{ render_field(form.name) }}
           {{ render_field(form.events) }}
+          {{ render_field(form.user, data_listing_href=url_for(listing_urls['uuid_user'])) }}
+          {{ render_field(form.users, with_label=false) }}
+          {{ render_field(form.services) }}
           {{ render_field(form.url) }}
           {{ render_field(form.method) }}
           {{ render_field(form.verify_certificate) }}
           {{ render_field(form.content_type) }}
-          {{ render_field(form.services) }}
           {{ render_field(form.body) }}
         {% endcall %}
       {% endcall %}

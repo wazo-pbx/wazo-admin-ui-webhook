@@ -17,7 +17,7 @@
         {% endcall %}
         {% call(webhook) build_list_table_rows(resource_list['items']) %}
           <td>{{ webhook.name }}</td>
-          <td>{{ webhook.events }}</td>
+          <td>{{ webhook.events[0] }}</td>
           <td>{{ webhook.config.url }}</td>
           <td>{{ webhook.config.method|upper }}</td>
           <td>
@@ -33,6 +33,7 @@
         {% call add_default_fields(form=form, submit_value="Add") %}
           {{ render_field(form.name) }}
           {{ render_field(form.events) }}
+          {{ render_field(form.user, data_listing_href=url_for(listing_urls['uuid_user'])) }}
           {{ render_field(form.services) }}
           <div id="http" class="hidden">
             {{ render_field(form.url) }}

@@ -18,20 +18,7 @@ class WebhookService(object):
         return self.webhookd.subscriptions.list()
 
     def create(self, resource):
-        subscription = {
-          'name': resource.get('name'),
-          'service': resource.get('services'),
-          'events': [resource.get('events')],
-          'config': {
-            'url': resource.get('url'),
-            'content_type': resource.get('content_type'),
-            'method': resource.get('method'),
-            'body': resource.get('body', ""),
-            'verify_certificate': resource.get('verify_certificate', 'false')
-          }
-        }
-
-        return self.webhookd.subscriptions.create(subscription)
+        return self.webhookd.subscriptions.create(self._create_resource(resource))
 
     def get(self, uuid):
         return self.webhookd.subscriptions.get(uuid)
@@ -40,12 +27,26 @@ class WebhookService(object):
         return self.webhookd.subscriptions.delete(uuid)
 
     def update(self, resource):
-        webhook_id = resource.get('id')
-        return self.webhookd.subscriptions.update(webhook_id, resource)
+        webhook_id = resource.get('uuid')
+        return self.webhookd.subscriptions.update(webhook_id, self._create_resource(resource))
 
     def list_services(self):
         return self.webhookd.subscriptions.list_services()
 
+    def _create_resource(self, resource):
+        return {
+          'name': resource.get('name'),
+          'service': resource.get('services'),
+          'events': [resource.get('events')],
+          'events_user_uuid': resource.get('user', ''),
+          'config': {
+            'url': resource.get('url'),
+            'content_type': resource.get('content_type'),
+            'method': resource.get('method'),
+            'body': resource.get('body', ''),
+            'verify_certificate': str(resource.get('verify_certificate', 'false')).lower()
+          }
+        }
 
 def get_webhookd_client():
     client = g.get('get_webhookd_client')
