@@ -7,7 +7,7 @@ from flask_login import current_user
 from werkzeug.local import LocalProxy
 
 from wazo_webhookd_client import Client as WebhookdClient
-from wazo_admin_ui.helpers.confd import confd
+
 
 class WebhookService(object):
 
@@ -38,7 +38,7 @@ class WebhookService(object):
           'name': resource.get('name'),
           'service': resource.get('services'),
           'events': [resource.get('events')],
-          'events_user_uuid': resource.get('user', ''),
+          'events_user_uuid': resource.get('user_uuid', ''),
           'config': {
             'url': resource.get('url'),
             'content_type': resource.get('content_type'),
@@ -47,6 +47,7 @@ class WebhookService(object):
             'verify_certificate': str(resource.get('verify_certificate', 'false')).lower()
           }
         }
+
 
 def get_webhookd_client():
     client = g.get('get_webhookd_client')

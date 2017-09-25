@@ -4,7 +4,6 @@
 
 from __future__ import unicode_literals
 
-from flask import render_template
 from flask_menu.classy import classy_menu_item
 
 from wazo_admin_ui.helpers.classful import BaseView
@@ -23,13 +22,11 @@ class WebhookView(BaseView):
 
     def _populate_form(self, form):
         form.services.choices = self._build_choices_services()
-        form.user.choices = self._build_setted_choices_users(form.users)
+        form.user_uuid.choices = self._build_setted_choices_users(form.events_user_uuid)
         return form
 
     def _map_resources_to_form(self, resource):
-        resource['user'] = resource.get('events_user_uuid')
         resource['events'] = resource.get('events')[0]
-        resource['users'] = resource.get('events_user_uuid')
         resource['services'] = resource.get('service')
 
         resource['url'] = resource['config'].get('url')
@@ -48,12 +45,7 @@ class WebhookView(BaseView):
             services_list.append((service, service))
         return services_list
 
-    def _build_setted_choices_users(self, users):
-        results = []
-        for user in users:
-            if user.lastname.data:
-                text = '{} {}'.format(user.firstname.data, user.lastname.data)
-            else:
-                text = user.firstname.data
-            results.append((user.uuid.data, text))
-        return results
+    def _build_setted_choices_users(self, user_uuid):
+        if not user_uuid.data or user_uuid.data == 'None':
+            return []
+        return [(user_uuid.data, user_uuid.data)]
