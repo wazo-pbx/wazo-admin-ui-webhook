@@ -7,3 +7,5 @@ tags:
   - beta
   - application
 homepage: https://github.com/wazo-pbx/wazo-admin-ui-webhook
+debian_depends:
+  - wazo-webhookd-client
