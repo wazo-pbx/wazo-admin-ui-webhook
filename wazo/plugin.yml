@@ -9,4 +9,4 @@ tags:
   - application
 homepage: https://github.com/wazo-pbx/wazo-admin-ui-webhook
 debian_depends:
-  - wazo-webhookd-client
+  - wazo-webhookd-client-python3
