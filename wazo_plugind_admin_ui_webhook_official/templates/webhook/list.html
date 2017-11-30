@@ -8,22 +8,17 @@
   <section class="content">
     {% call build_list_containers('Webhooks', 'globe') %}
       {% call build_list_table() %}
-        {% call build_list_table_headers() %}
+        {% call build_list_table_headers(get=url_for('.WebhookView:get', id=''), delete=url_for('.WebhookView:delete', id='')) %}
           <th>Display Name</th>
           <th>Event Name</th>
           <th>Target</th>
           <th>Method</th>
-          {{ add_list_table_header_action() }}
         {% endcall %}
         {% call(webhook) build_list_table_rows(resource_list['items']) %}
           <td>{{ webhook.name }}</td>
           <td>{{ webhook.events[0] }}</td>
           <td>{{ webhook.config.url }}</td>
           <td>{{ webhook.config.method|upper }}</td>
-          <td>
-            {{ add_edit_button(href=url_for('.WebhookView:get', id=webhook.uuid)) }}
-            {{ add_delete_button(href=url_for('.WebhookView:delete', id=webhook.uuid)) }}
-          </td>
         {% endcall %}
       {% endcall %}
     {% endcall %}
