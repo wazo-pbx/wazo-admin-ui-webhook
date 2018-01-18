@@ -37,7 +37,7 @@ class WebhookService(object):
           'name': resource.get('name'),
           'service': resource.get('services'),
           'events': [resource.get('events')],
-          'events_user_uuid': resource.get('user_uuid', ''),
+          'events_user_uuid': resource.get('user_uuid', None),
           'config': {
             'url': resource.get('url'),
             'content_type': resource.get('content_type'),
