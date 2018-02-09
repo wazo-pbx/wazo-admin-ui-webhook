@@ -1,7 +1,6 @@
-plugin_format_version: 2
 name: admin-ui-webhook
 namespace: official
-version: 1.1.2-2
+version: 1.1.2-3
 author: Wazo Team
 display_name: Webhook
 min_wazo_version: 18.02
