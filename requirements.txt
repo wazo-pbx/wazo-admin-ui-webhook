@@ -1,0 +1,2 @@
+git+https://github.com/wazo-pbx/wazo-admin-ui.git
+git+https://github.com/wazo-pbx/wazo-webhookd-client.git
