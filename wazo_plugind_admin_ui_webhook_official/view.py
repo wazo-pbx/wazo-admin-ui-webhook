@@ -1,6 +1,7 @@
-# Copyright 2017 The Wazo Authors  (see the AUTHORS file)
+# Copyright 2017-2018 The Wazo Authors  (see the AUTHORS file)
 # SPDX-License-Identifier: GPL-3.0+
 
+from flask_babel import lazy_gettext as l_
 from flask_menu.classy import classy_menu_item
 
 from wazo_admin_ui.helpers.classful import BaseView
@@ -9,11 +10,10 @@ from .form import WebhookFormHTTP
 
 
 class WebhookView(BaseView):
-
     form = WebhookFormHTTP
     resource = 'webhook'
 
-    @classy_menu_item('.webhooks', 'Webhooks', order=10, icon="globe")
+    @classy_menu_item('.webhooks', l_('Webhooks'), order=10, icon="globe")
     def index(self):
         return super(WebhookView, self).index()
 

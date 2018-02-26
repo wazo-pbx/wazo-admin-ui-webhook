@@ -1,12 +1,12 @@
 {% extends "layout.html" %}
 
 {% block content_header %}
-  {{ build_breadcrumb('Webhook', '', 'globe', ['List']) }}
+  {{ build_breadcrumb(l_('Webhook'), '', 'globe', [l_('List')]) }}
 {% endblock %}
 
 {% block content %}
   <section class="content">
-    {% call build_list_containers('Webhooks', 'globe') %}
+    {% call build_list_containers(l_('Webhooks'), 'globe') %}
       {% call build_list_table() %}
         {% call build_list_table_headers(get=url_for('.WebhookView:get', id=''), delete=url_for('.WebhookView:delete', id='')) %}
           <th>Display Name</th>
@@ -27,9 +27,9 @@
       {% endcall %}
     {% endcall %}
 
-    {% call build_hidden_add_containers('Add Webhook') %}
+    {% call build_hidden_add_containers(l_('Add Webhook')) %}
       {% call build_form() %}
-        {% call add_default_fields(form=form, submit_value="Add") %}
+        {% call add_default_fields(form=form, submit_value=l_('Add')) %}
           {{ render_field(form.name) }}
           {{ render_field(form.events) }}
           {{ render_field(form.user_uuid, data_listing_href=url_for(listing_urls['uuid_user'])) }}
