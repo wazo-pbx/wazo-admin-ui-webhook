@@ -1,4 +1,4 @@
-# Copyright 2017 The Wazo Authors  (see the AUTHORS file)
+# Copyright 2017-2018 The Wazo Authors  (see the AUTHORS file)
 # SPDX-License-Identifier: GPL-3.0+
 
 from flask import g
@@ -34,17 +34,17 @@ class WebhookService(object):
 
     def _create_resource(self, resource):
         return {
-          'name': resource.get('name'),
-          'service': resource.get('services'),
-          'events': [resource.get('events')],
-          'events_user_uuid': resource.get('user_uuid', None),
-          'config': {
-            'url': resource.get('url'),
-            'content_type': resource.get('content_type'),
-            'method': resource.get('method'),
-            'body': resource.get('body', ''),
-            'verify_certificate': str(resource.get('verify_certificate', 'false')).lower()
-          }
+            'name': resource.get('name'),
+            'service': resource.get('services'),
+            'events': [resource.get('events')],
+            'events_user_uuid': resource.get('user_uuid', None),
+            'config': {
+                'url': resource.get('url'),
+                'content_type': resource.get('content_type'),
+                'method': resource.get('method'),
+                'body': resource.get('body', ''),
+                'verify_certificate': str(resource.get('verify_certificate', 'false')).lower()
+            }
         }
 
 
@@ -56,5 +56,6 @@ def get_webhookd_client():
         client.set_token(token)
 
     return client
+
 
 webhookd = LocalProxy(get_webhookd_client)

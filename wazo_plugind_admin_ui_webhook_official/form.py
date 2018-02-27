@@ -25,11 +25,16 @@ class WebhookForm(BaseForm):
 
 class WebhookFormHTTP(WebhookForm):
     url = StringField(l_('Target'), [InputRequired(), Length(max=512)])
-    method = SelectField(l_('Method'), choices=[('post', l_('POST')),
-                                            ('get', l_('GET')),
-                                            ('put', l_('PUT')),
-                                            ('delete', l_('DELETE')),
-                                            ('head', l_('HEAD'))])
+    method = SelectField(
+        l_('Method'),
+        choices=[
+            ('post', l_('POST')),
+            ('get', l_('GET')),
+            ('put', l_('PUT')),
+            ('delete', l_('DELETE')),
+            ('head', l_('HEAD'))
+        ]
+    )
     content_type = StringField(l_('Content Type'), [Length(max=100)], default='application/json')
     verify_certificate = BooleanField(l_('Verify Certificate'))
     body = TextAreaField(l_('Body'))
