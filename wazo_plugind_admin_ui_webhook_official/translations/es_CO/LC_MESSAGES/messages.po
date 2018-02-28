@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wazo_admin_ui_webhook 0.1\n"
 "Report-Msgid-Bugs-To: 'dev@wazo.community'\n"
-"POT-Creation-Date: 2018-02-26 14:47-0500\n"
+"POT-Creation-Date: 2018-02-27 15:57-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: Spanish (Colombia) (https://www.transifex.com/wazo/teams/69545/es_CO/)\n"
 "MIME-Version: 1.0\n"
@@ -38,43 +38,43 @@ msgstr ""
 msgid "Target"
 msgstr ""
 
-#: wazo_plugind_admin_ui_webhook_official/form.py:28
+#: wazo_plugind_admin_ui_webhook_official/form.py:29
 msgid "Method"
 msgstr ""
 
-#: wazo_plugind_admin_ui_webhook_official/form.py:28
+#: wazo_plugind_admin_ui_webhook_official/form.py:31
 msgid "POST"
 msgstr ""
 
-#: wazo_plugind_admin_ui_webhook_official/form.py:29
+#: wazo_plugind_admin_ui_webhook_official/form.py:32
 msgid "GET"
 msgstr ""
 
-#: wazo_plugind_admin_ui_webhook_official/form.py:30
+#: wazo_plugind_admin_ui_webhook_official/form.py:33
 msgid "PUT"
 msgstr ""
 
-#: wazo_plugind_admin_ui_webhook_official/form.py:31
+#: wazo_plugind_admin_ui_webhook_official/form.py:34
 msgid "DELETE"
 msgstr ""
 
-#: wazo_plugind_admin_ui_webhook_official/form.py:32
+#: wazo_plugind_admin_ui_webhook_official/form.py:35
 msgid "HEAD"
 msgstr ""
 
-#: wazo_plugind_admin_ui_webhook_official/form.py:33
+#: wazo_plugind_admin_ui_webhook_official/form.py:38
 msgid "Content Type"
 msgstr ""
 
-#: wazo_plugind_admin_ui_webhook_official/form.py:34
+#: wazo_plugind_admin_ui_webhook_official/form.py:39
 msgid "Verify Certificate"
 msgstr ""
 
-#: wazo_plugind_admin_ui_webhook_official/form.py:35
+#: wazo_plugind_admin_ui_webhook_official/form.py:40
 msgid "Body"
 msgstr ""
 
-#: wazo_plugind_admin_ui_webhook_official/form.py:36
+#: wazo_plugind_admin_ui_webhook_official/form.py:41
 msgid "Submit"
 msgstr ""
 
@@ -96,6 +96,18 @@ msgstr ""
 
 #: wazo_plugind_admin_ui_webhook_official/templates/webhook/edit.html:11
 msgid "Update"
+msgstr ""
+
+#: wazo_plugind_admin_ui_webhook_official/templates/webhook/list.html:12
+msgid "Display Name"
+msgstr ""
+
+#: wazo_plugind_admin_ui_webhook_official/templates/webhook/list.html:13
+msgid "Events Name"
+msgstr ""
+
+#: wazo_plugind_admin_ui_webhook_official/templates/webhook/list.html:14
+msgid "Service"
 msgstr ""
 
 #: wazo_plugind_admin_ui_webhook_official/templates/webhook/list.html:30
