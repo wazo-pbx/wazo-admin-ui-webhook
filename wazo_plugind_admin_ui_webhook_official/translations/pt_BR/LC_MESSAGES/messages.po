@@ -4,12 +4,15 @@
 # wazo_admin_ui_webhook project.
 # Wazo Dev Team <dev@wazo.community>, 2018.
 # 
+# Translators:
+# Roberto Xavier dos Santos <rxsantos@gmail.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: wazo_admin_ui_webhook 0.1\n"
 "Report-Msgid-Bugs-To: 'dev@wazo.community'\n"
 "POT-Creation-Date: 2018-02-27 15:57-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Roberto Xavier dos Santos <rxsantos@gmail.com>, 2018\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/wazo/teams/69545/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -20,100 +23,100 @@ msgstr ""
 
 #: wazo_plugind_admin_ui_webhook_official/form.py:19
 msgid "Display name"
-msgstr ""
+msgstr "Nome do Display"
 
 #: wazo_plugind_admin_ui_webhook_official/form.py:20
 msgid "Event Name"
-msgstr ""
+msgstr "Nome do Evento"
 
 #: wazo_plugind_admin_ui_webhook_official/form.py:21
 msgid "Services"
-msgstr ""
+msgstr "Serviços"
 
 #: wazo_plugind_admin_ui_webhook_official/form.py:23
 msgid "User"
-msgstr ""
+msgstr "Usuário"
 
 #: wazo_plugind_admin_ui_webhook_official/form.py:27
 msgid "Target"
-msgstr ""
+msgstr "Alvo"
 
 #: wazo_plugind_admin_ui_webhook_official/form.py:29
 msgid "Method"
-msgstr ""
+msgstr "Método"
 
 #: wazo_plugind_admin_ui_webhook_official/form.py:31
 msgid "POST"
-msgstr ""
+msgstr "POST"
 
 #: wazo_plugind_admin_ui_webhook_official/form.py:32
 msgid "GET"
-msgstr ""
+msgstr "GET"
 
 #: wazo_plugind_admin_ui_webhook_official/form.py:33
 msgid "PUT"
-msgstr ""
+msgstr "PUT"
 
 #: wazo_plugind_admin_ui_webhook_official/form.py:34
 msgid "DELETE"
-msgstr ""
+msgstr "DELETE"
 
 #: wazo_plugind_admin_ui_webhook_official/form.py:35
 msgid "HEAD"
-msgstr ""
+msgstr "HEAD"
 
 #: wazo_plugind_admin_ui_webhook_official/form.py:38
 msgid "Content Type"
-msgstr ""
+msgstr "Tipo de Conteúdo"
 
 #: wazo_plugind_admin_ui_webhook_official/form.py:39
 msgid "Verify Certificate"
-msgstr ""
+msgstr "Verificar Certificado"
 
 #: wazo_plugind_admin_ui_webhook_official/form.py:40
 msgid "Body"
-msgstr ""
+msgstr "Corpo"
 
 #: wazo_plugind_admin_ui_webhook_official/form.py:41
 msgid "Submit"
-msgstr ""
+msgstr "Submeter"
 
 #: wazo_plugind_admin_ui_webhook_official/templates/webhook/list.html:9
 #: wazo_plugind_admin_ui_webhook_official/view.py:16
 msgid "Webhooks"
-msgstr ""
+msgstr "Webhooks"
 
 #: wazo_plugind_admin_ui_webhook_official/templates/webhook/edit.html:4
 #: wazo_plugind_admin_ui_webhook_official/templates/webhook/edit.html:9
 #: wazo_plugind_admin_ui_webhook_official/templates/webhook/list.html:4
 msgid "Webhook"
-msgstr ""
+msgstr "Webhook"
 
 #: wazo_plugind_admin_ui_webhook_official/templates/webhook/edit.html:4
 #: wazo_plugind_admin_ui_webhook_official/templates/webhook/list.html:4
 msgid "List"
-msgstr ""
+msgstr "Lista"
 
 #: wazo_plugind_admin_ui_webhook_official/templates/webhook/edit.html:11
 msgid "Update"
-msgstr ""
+msgstr "Atualizar"
 
 #: wazo_plugind_admin_ui_webhook_official/templates/webhook/list.html:12
 msgid "Display Name"
-msgstr ""
+msgstr "Nome do Display"
 
 #: wazo_plugind_admin_ui_webhook_official/templates/webhook/list.html:13
 msgid "Events Name"
-msgstr ""
+msgstr "Nome dos Eventos"
 
 #: wazo_plugind_admin_ui_webhook_official/templates/webhook/list.html:14
 msgid "Service"
-msgstr ""
+msgstr "Serviço"
 
 #: wazo_plugind_admin_ui_webhook_official/templates/webhook/list.html:30
 msgid "Add Webhook"
-msgstr ""
+msgstr "Adicionar Webhook"
 
 #: wazo_plugind_admin_ui_webhook_official/templates/webhook/list.html:32
 msgid "Add"
-msgstr ""
+msgstr "Adicionar"
